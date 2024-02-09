@@ -25,7 +25,7 @@ async function authUrl(videoID) {
   var partURL;
   var isType;
   var data;
-  partURL = "https://cmrcors.herokuapp.com/";
+  partURL = "https://cmrcors.onrender.com/";
   isType = "POST";
   try {
     data = await videoHacker(partURL, isType, videoID);
