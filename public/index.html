@@ -79,11 +79,10 @@
 
       // LOGICA DE CANALES
       window.addEventListener('message', function(event) {
-        alert("mierda");
-        myPlayer.play();
-        // if (event.data.type === 'MiCanal') {
-        //   alert('Mensaje recibido desde Flutter: ' + event.data.message);
-        // }
+        if (event.data === 'MiCanal') {
+          alert('Mensaje recibido desde Flutter: ' + event.data.message);
+          myPlayer.play();
+        }
       });      
 
       // DETECTAR LA SAGA
