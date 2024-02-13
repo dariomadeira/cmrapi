@@ -68,22 +68,16 @@
       // AUTOPLAY
       $(window).click(function() {
         if (myPlayer) {
-          if (myPlayer.paused()) {
-            myPlayer.play();
-          }
-          if (myPlayer.play()) {
-            myPlayer.paused();
+          switch (myPlayer.paused()) {
+            case true:
+              myPlayer.play();
+              break;
+            case false:
+              myPlayer.pause();
+              break;
           }
         }
       });
-
-      // LOGICA DE CANALES
-      window.addEventListener('message', function(event) {
-        if (event.data === 'MiCanal') {
-          alert('Mensaje recibido desde Flutter: ' + event.data.message);
-          myPlayer.play();
-        }
-      });      
 
       // DETECTAR LA SAGA
       function handleSaga(saga) {
@@ -169,7 +163,7 @@
               }
             });
             // myPlayer.muted(true);
-            // myPlayer.play();
+            myPlayer.play();
             // myPlayer.requestFullscreen();
           }
         }
