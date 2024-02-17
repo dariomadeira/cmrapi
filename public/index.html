@@ -67,16 +67,16 @@
 
       // AUTOPLAY
       $(window).click(function() {
-        if (myPlayer) {
-          switch (myPlayer.paused()) {
-            case true:
+        // if (myPlayer) {
+        //   switch (myPlayer.paused()) {
+        //     case true:
               myPlayer.play();
-              break;
-            case false:
-              myPlayer.pause();
-              break;
-          }
-        }
+        //       break;
+        //     case false:
+        //       myPlayer.pause();
+        //       break;
+        //   }
+        // }
       });
 
       // DETECTAR LA SAGA
@@ -163,7 +163,7 @@
               }
             });
             // myPlayer.muted(true);
-            myPlayer.play();
+            // myPlayer.play();
             // myPlayer.requestFullscreen();
           }
         }
